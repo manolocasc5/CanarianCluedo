@@ -23,3 +23,9 @@ La historia se desarrolla en una mansión lujosa en la isla de La Palma, en 1898
         Pista 7: Gaspar estaba rezando en el jardín
 
 ![alt text](static/img/imagen2.PNG)
+
+# AUTORES:
+        - Mahalia
+        - Sindy
+        - Alejandro
+        - Manolo

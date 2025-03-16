@@ -1,13 +1,17 @@
 from flask import Flask, render_template, request, jsonify
 import pymysql
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
-DB_HOST='localhost'
-DB_USER='root'
-DB_PASSWORD='root'
-DB_NAME='CanarianCluedo'
-
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = int(os.getenv("DB_PORT"))
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_NAME = os.getenv("DB_NAME")
 
 @app.route('/')
 def index():
@@ -21,7 +25,7 @@ def juego():
 def execute_query():
     query = request.json.get('query')
     try:
-        connection = pymysql.connect(host=DB_HOST, user=DB_USER, password=DB_PASSWORD, database=DB_NAME)
+        connection = pymysql.connect(host=DB_HOST, port=DB_PORT, user=DB_USER, password=DB_PASSWORD, database=DB_NAME)
         with connection.cursor() as cursor:
             cursor.execute(query)
             result = cursor.fetchall()

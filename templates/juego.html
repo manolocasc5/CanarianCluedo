@@ -1,0 +1,48 @@
+<!-- juego.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Resuelve el Misterio</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Pistas del Misterio</h2>
+        <p>Aquí tienes las siguientes pistas para intentar resolver el crimen...</p>
+        <ul>
+            <li>Pista 1: La víctima presentaba signos de envenamiento y cortes en el cuerpo</li>
+            <li>Pista 2: Anselmo estuvo en el despacho de la víctima a las 21:15</li>
+            <li>Pista 3: Emilio fue visto en el salón, leyendo documentos importantes</li>
+            <li>Pista 4: Se encontró una pistola en el jardín con restos de pólvora</li>
+            <li>Pista 5: Lucila le ofreció una copa a la víctima a las 21:15 y luego se fue con el mayordomo</li>
+            <li>Pista 6: Carmen discutía con la víctima en la biblioteca por celos a las 21:00</li>
+            <li>Pista 7: Gaspar estaba rezando en el jardín</li>
+        </ul>
+
+        <h2>Consulta SQL</h2>
+        <textarea id="sql-query" placeholder="Escribe tu consulta SQL aquí..."></textarea>
+        <button onclick="ejecutarSQL()">Ejecutar</button>
+        <div id="sql-result"></div>
+
+        <h2>Resuelve el crimen</h2>
+        <label for="asesino">El invitado que mató a Don Sebastián es: </label>
+        <input type="text" id="asesino">
+        <button onclick="verificarRespuesta('asesino', 'Emilio Barreto', 'resultado-asesino')">Comprobar</button>
+        <span id="resultado-asesino"></span>
+
+        <label for="arma">El arma utilizada para el asesinato es: </label>
+        <input type="text" id="arma">
+        <button onclick="verificarRespuesta('arma', 'Daga', 'resultado-arma')">Comprobar</button>
+        <span id="resultado-arma"></span>
+
+        <label for="habitacion">La habitación donde ocurrió el crimen es: </label>
+        <input type="text" id="habitacion">
+        <button onclick="verificarRespuesta('habitacion', 'Salón principal', 'resultado-habitacion')">Comprobar</button>
+        <span id="resultado-habitacion"></span>
+
+    </div>
+    <script src="static/script.js"></script>
+</body>
+</html>

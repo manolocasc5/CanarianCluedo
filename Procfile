@@ -1,1 +1,1 @@
-web: gunicorn canarian_cluedo:Flask(__name__)
+web: gunicorn canariancluedo:app

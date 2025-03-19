@@ -25,7 +25,7 @@ La historia se desarrolla en una mansión lujosa en la isla de La Palma, en 1898
 ![alt text](static/img/imagen2.PNG)
 
 # AUTORES:
-        - Mahalia
-        - Sindy
-        - Alejandro
-        - Manolo
+        - Alejandro Cabrera Pestana
+        - Manolo Castillo Casañas
+        - Sindy Dávila Londoño
+        - Mahalia Yánez Monzón

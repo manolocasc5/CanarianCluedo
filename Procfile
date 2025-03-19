@@ -1,1 +1,1 @@
-web: gunicorn canariancluedo:app
+web: gunicorn canarian_cluedo:app
